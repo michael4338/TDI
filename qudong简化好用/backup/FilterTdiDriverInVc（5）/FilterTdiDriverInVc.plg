@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FilterTdiDriverInVc - Win32 Debug--------------------
+</h3>
+
+
+E:\qudong\FilterTdiDriverInVc>if "D:\WINDDK\2600" == "" goto InvalidParameter 
+
+E:\qudong\FilterTdiDriverInVc>if not exist D:\WINDDK\2600\bin\setenv.bat goto SetenvNotFound 
+
+E:\qudong\FilterTdiDriverInVc>call D:\WINDDK\2600\bin\setenv.bat D:\WINDDK\2600 checked 
+BUILD: Object root set to: ==> objchk
+BUILD: Adding /Y to COPYCMD so xcopy ops won't hang.
+BUILD: /i switch ignored
+BUILD: Compile and Link for i386
+BUILD: Loading D:\WINDDK\2600\build.dat...
+BUILD: Computing Include file dependencies:
+BUILD: Examining e:\qudong\filtertdidriverinvc\filtertdidriver directory for files to compile.
+    e:\qudong\filtertdidriverinvc\filtertdidriver 
+    e:\qudong\filtertdidriverinvc\filtertdidriver - 1 source files (1,808 lines)
+BUILD: Saving D:\WINDDK\2600\build.dat...
+BUILD: Compiling e:\qudong\filtertdidriverinvc\filtertdidriver directory
+Compiling - packet.c for i386
+BUILD: Linking e:\qudong\filtertdidriverinvc\filtertdidriver directory
+Linking Executable - objchk\i386\filtertdidriver.sys for i386
+BUILD: Done
+
+    2 files compiled -  1808 LPS
+    1 executable built
+
+
+
+<h3>Results</h3>
+FilterTdiDriverInVc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DebugPrintInVc - Win32 Debug--------------------
+</h3>
+
+
+E:\qudong\DebugPrint\sys\DebugPrintInVc>if "D:\WINDDK\2600" == "" goto InvalidParameter 
+
+E:\qudong\DebugPrint\sys\DebugPrintInVc>if not exist D:\WINDDK\2600\bin\setenv.bat goto SetenvNotFound 
+
+E:\qudong\DebugPrint\sys\DebugPrintInVc>call D:\WINDDK\2600\bin\setenv.bat D:\WINDDK\2600 checked 
+BUILD: Object root set to: ==> objchk
+BUILD: Adding /Y to COPYCMD so xcopy ops won't hang.
+BUILD: /i switch ignored
+BUILD: Compile and Link for i386
+BUILD: Loading D:\WINDDK\2600\build.dat...
+BUILD: Computing Include file dependencies:
+BUILD: Examining e:\qudong\debugprint\sys\debugprintinvc\debugprint directory for files to compile.
+    e:\qudong\debugprint\sys\debugprintinvc\debugprint 
+BUILD: Linking e:\qudong\debugprint\sys\debugprintinvc\debugprint directory
+BUILD: Done
+
+
+
+
+<h3>Results</h3>
+DebugPrintInVc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+TARGETNAME=DebugPrt
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+TARGETPATH=OBJ
+
+INCLUDES=$(BASEDIR)\inc;
+
+SOURCES= init.cpp \
+         dispatch.cpp \
+		 DebugPrint.rc
+
+NTTARGETFILES=PostBuildSteps

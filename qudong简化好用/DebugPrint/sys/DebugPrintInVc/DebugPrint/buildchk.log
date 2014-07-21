@@ -1,0 +1,8 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining e:\qudong\debugprint\sys\debugprintinvc\debugprint directory for files to compile.
+Linking e:\qudong\debugprint\sys\debugprintinvc\debugprint directory ********************
+'nmake.exe /c BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+	copy objchk\i386\DebugPrt.sys C:\WINDOWS\system32\drivers
+已复制         1 个文件。
+
+Stop.

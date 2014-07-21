@@ -1,0 +1,56 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining e:\qudong\debugprint\sys\debugprintinvc\debugprint directory for files to compile.
+Compiling e:\qudong\debugprint\sys\debugprintinvc\debugprint directory ********************
+'nmake.exe /c BUILDMSG=Stop. -i NTTEST= UMTEST= NOLINK=1 NOPASS0=1 386=1'
+    rc -l 409 -DSXS_ASSEMBLY_NAME=""""""  -DSXS_ASSEMBLY_VERSION=""""""  -DSXS_ASSEMBLY_LANGUAGE=""""""  -DSXS_PROCESSOR_ARCHITECTURE="""x86"""  -DSXS_TARGET="""DebugPrt.sys"""   -DSYSTEM_COMPATIBLE_ASSEMBLY_NAME="""Microsoft.Windows.SystemCompatible"""  -DLSYSTEM_COMPATIBLE_ASSEMBLY_NAME=L"""Microsoft.Windows.SystemCompatible"""   -z "MS Sans Serif,Helv/MS Shell Dlg"  -r -fo objfre\i386\debugprint.tmp -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0600    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=WinDDK -DFPO=1  -DNDEBUG -D_DLL=1    -ID:\WINDDK\2600\inc -Iobjfre\i386 -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\ddk\wdm\wxp -ID:\WINDDK\2600\inc\crt .\debugprint.rc
+
+
+cl -nologo -Ii386\ -I. -ID:\WINDDK\2600\inc -Iobjfre\i386 -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\ddk\wdm\wxp -ID:\WINDDK\2600\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0600    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=WinDDK -DFPO=1  -DNDEBUG -D_DLL=1      /c /Zel /Zp8 /Gy -cbstring /W3 /WX /Gz  /QIfdiv- /QIf /G6 /Gi- /Gm- /GX-  /GR- /GF  -Z7 /Oxs /Oy   -FID:\WINDDK\2600\inc\wxp\warning.h     .\init.cpp
+init.cpp
+cl -nologo -Ii386\ -I. -ID:\WINDDK\2600\inc -Iobjfre\i386 -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\ddk\wdm\wxp -ID:\WINDDK\2600\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0600    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=WinDDK -DFPO=1  -DNDEBUG -D_DLL=1      /c /Zel /Zp8 /Gy -cbstring /W3 /WX /Gz  /QIfdiv- /QIf /G6 /Gi- /Gm- /GX-  /GR- /GF  -Z7 /Oxs /Oy   -FID:\WINDDK\2600\inc\wxp\warning.h     .\dispatch.cpp
+dispatch.cpp
+cl -nologo -Ii386\ -I. -ID:\WINDDK\2600\inc -Iobjfre\i386 -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\wxp -ID:\WINDDK\2600\inc\ddk\wdm\wxp -ID:\WINDDK\2600\inc\crt -D_X86_=1 -Di386=1  -DSTD_CALL -DCONDITION_HANDLING=1   -DNT_INST=0 -DWIN32=100 -D_NT1X_=100 -DWINNT=1 -D_WIN32_WINNT=0x0501 /DWINVER=0x0501 -D_WIN32_IE=0x0600    -DWIN32_LEAN_AND_MEAN=1 -DDEVL=1 -D__BUILDMACHINE__=WinDDK -DFPO=1  -DNDEBUG -D_DLL=1      /c /Zel /Zp8 /Gy -cbstring /W3 /WX /Gz  /QIfdiv- /QIf /G6 /Gi- /Gm- /GX-  /GR- /GF  -Z7 /Oxs /Oy   -FID:\WINDDK\2600\inc\wxp\warning.h     .\pnp.cpp
+pnp.cpp
+	link -out:objfre\i386\DebugPrt.sys -machine:ix86 @C:\DOCUME~1\MJ\LOCALS~1\Temp\nma02600.
+Microsoft (R) Incremental Linker Version 7.00.9210
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+-MERGE:_PAGE=PAGE 
+-MERGE:_TEXT=.text 
+-SECTION:INIT,d 
+-OPT:REF 
+-OPT:ICF 
+-IGNORE:4010,4037,4039,4065,4070,4078,4087,4089,4198,4221 
+-INCREMENTAL:NO 
+-FULLBUILD 
+/release 
+-NODEFAULTLIB 
+/WX 
+-debug:FULL 
+-debugtype:cv 
+-version:5.1 
+-osversion:5.1 
+/opt:nowin98 
+-STACK:0x40000,0x1000 
+-driver -driver:wdm 
+-base:0x10000 
+-align:0x80 
+-subsystem:native,1.10 
+-entry:DriverEntry@8 
+-out:objfre\i386\DebugPrt.sys 
+objfre\i386\debugprint.res 
+objfre\i386\init.obj 
+objfre\i386\dispatch.obj 
+objfre\i386\pnp.obj 
+D:\WINDDK\2600\lib\wxp\i386\wdm.lib 
+Skip Binplace:
+	copy objfre\i386\DebugPrt.sys C:\WINDOWS\system32\drivers
+已复制         1 个文件。
+
+Stop.
+Linking e:\qudong\debugprint\sys\debugprintinvc\debugprint directory ********************
+'nmake.exe /c BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+	copy objfre\i386\DebugPrt.sys C:\WINDOWS\system32\drivers
+已复制         1 个文件。
+
+Stop.

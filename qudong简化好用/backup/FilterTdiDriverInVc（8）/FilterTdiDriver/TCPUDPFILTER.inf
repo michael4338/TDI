@@ -1,0 +1,74 @@
+; DebugPrint.Inf - install information file
+; Copyright ?1998,1999 Chris Cant, PHD Computer Consultants Ltd
+
+[Version]
+Signature="$Chicago$"
+Class=Unknown
+Provider=%LLT%
+DriverVer=03/19/2005,1.0.3.0
+
+[Manufacturer]
+%LLT% = TCPUDPFILTER
+
+[TCPUDPFILTER]
+%TCPUDPFILTER%=TCPUDPFILTER.Install, *llt\TCPUDPFILTER
+
+[DestinationDirs]
+TCPUDPFILTER.Files.Driver=10,System32\Drivers
+TCPUDPFILTER.Files.Driver.NTx86=10,System32\Drivers
+
+[SourceDisksNames]
+1="TCPUDPFILTER Driver disk",,,
+
+[SourceDisksFiles]
+FilterTdiDriver.sys=1,obj\i386\free
+
+[SourceDisksFiles.x86]
+FilterTdiDriver.sys=1,objfre\i386
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Windows 98
+
+[TCPUDPFILTER.Install]
+CopyFiles=TCPUDPFILTER.Files.Driver
+AddReg=TCPUDPFILTER.AddReg
+
+[TCPUDPFILTER.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,FilterTdiDriver.sys
+
+[TCPUDPFILTER.Files.Driver]
+FilterTdiDriver.sys
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Windows 2000
+
+[TCPUDPFILTER.Install.NTx86]
+CopyFiles=TCPUDPFILTER.Files.Driver.NTx86
+
+[TCPUDPFILTER.Files.Driver.NTx86]
+FilterTdiDriver.sys,,,%COPYFLG_NOSKIP%
+
+[TCPUDPFILTER.Install.NTx86.Services]
+AddService = FilterTdiDriver, %SPSVCINST_ASSOCSERVICE%, TCPUDPFILTER.Service
+
+[TCPUDPFILTER.Service]
+DisplayName    = %TCPUDPFILTER.ServiceName%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %10%\System32\Drivers\FilterTdiDriver.sys
+
+; Strings
+
+[Strings]
+LLT="LIN LONG TAO"
+TCPUDPFILTER="tcp and udp filter in tdi level"
+TCPUDPFILTER.ServiceName="TCPUDPFILTER Driver"
+
+SPSVCINST_ASSOCSERVICE=0x00000002	; Driver service is associated with device being installed
+COPYFLG_NOSKIP=2	; Do not allow user to skip file
+SERVICE_KERNEL_DRIVER=1
+SERVICE_AUTO_START=2
+SERVICE_DEMAND_START=3
+SERVICE_ERROR_NORMAL=1

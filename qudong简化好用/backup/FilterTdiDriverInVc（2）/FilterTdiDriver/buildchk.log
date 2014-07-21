@@ -1,0 +1,6 @@
+BUILD: Computing Include file dependencies:
+BUILD: Examining e:\qudong\filtertdidriverinvc\filtertdidriver directory for files to compile.
+Linking e:\qudong\filtertdidriverinvc\filtertdidriver directory ********************
+'nmake.exe /c BUILDMSG=Stop. -i LINKONLY=1 NOPASS0=1 NTTEST= UMTEST= 386=1'
+
+Stop.
